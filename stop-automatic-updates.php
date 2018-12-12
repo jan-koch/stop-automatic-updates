@@ -41,7 +41,7 @@ define( 'STOP_AUTOMATIC_UPDATES_VERSION', '1.0.0' );
  * The code that runs during plugin activation.
  * This action is documented in includes/class-stop-automatic-updates-activator.php
  */
-function activate_stop_automatic_updates() {
+function sau_activate_stop_automatic_updates() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-stop-automatic-updates-activator.php';
 	Stop_Automatic_Updates_Activator::activate();
 }
@@ -50,13 +50,13 @@ function activate_stop_automatic_updates() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-stop-automatic-updates-deactivator.php
  */
-function deactivate_stop_automatic_updates() {
+function sau_deactivate_stop_automatic_updates() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-stop-automatic-updates-deactivator.php';
 	Stop_Automatic_Updates_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_stop_automatic_updates' );
-register_deactivation_hook( __FILE__, 'deactivate_stop_automatic_updates' );
+register_activation_hook( __FILE__, 'sau_activate_stop_automatic_updates' );
+register_deactivation_hook( __FILE__, 'sau_deactivate_stop_automatic_updates' );
 
 /**
  * The core plugin class that is used to define internationalization,

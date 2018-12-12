@@ -73,7 +73,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-stop-automatic-updates.php
  *
  * @since    1.0.0
  */
-function run_stop_automatic_updates() {
+function sau_run_stop_automatic_updates() {
 
 	$plugin = new Stop_Automatic_Updates();
 
@@ -82,4 +82,4 @@ function run_stop_automatic_updates() {
 	$plugin->run();
 
 }
-run_stop_automatic_updates();
+sau_run_stop_automatic_updates();
